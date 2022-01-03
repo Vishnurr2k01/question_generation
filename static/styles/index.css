@@ -206,6 +206,12 @@ body{
   .name{
       color: #fff;
   }
+  .generate-container{
+      flex:1;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+  }
   #generate{
       width: 15rem;
       height: 3rem;

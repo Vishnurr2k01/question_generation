@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Add Paragraph</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/index.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+
+  <div class="main">
+    <form method="POST" , action="{{url_for('home')}}">
+    <div class="addpara">
+      
+        <textarea name="a" placeholder=" Add paragraph here...." id="" cols="30" rows="10"></textarea>
+    </div>
+
+    <div class="generate-container">
+      <p>OR</p>
+    </div>
+
+    <div class="frame">
+      <div class="thumbnail">
+        <div class="thumbnail__header">
+          <p>Drop file to upload</p>
+          <span class="loadBar"></span>
+        </div>
+
+        <div class="thumbnail__body">
+          <div>
+            <div class="drop icon">
+
+              <i id="cam" class="fas fa-camera"></i>
+
+              <span class="name"></span>
+              <input type="file" id="file" name="file">
+            </div>
+
+            <div class="arrows icon hidden">
+              <i class="fas fa-circle-notch"></i>
+
+            </div>
+
+            <div class="checkmark icon hidden">
+              <i class="fas fa-check"></i>
+
+            </div>
+          </div>
+
+          <button id="upload" class="btn uploadBtn" type="button" >Save</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="generate-container">
+      <input id="generate" name="generate" value="Generate questions" type="submit" value='predict!' >
+    </div>
+  </form>
+    <!-- <script src="" async defer></script> -->
+    <script src="{{url_for('static', filename='js/index.js')}}"></script>
+  </div>
+</body>
+
+</html>
